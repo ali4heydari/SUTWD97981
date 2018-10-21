@@ -1,0 +1,5 @@
+@keyframes moveFromDownToTop {
+    from {bottom: 0px;}
+    to {top: 0px;}
+}
+
