@@ -1,5 +1,14 @@
 @keyframes moveFromDownToTop {
-    from {bottom: 0px;}
-    to {top: 0px;}
+    0%,100%{bottom: 0;}
+    100%{bottom: calc(100% - 1em);}
+
 }
 
+#lovelyPic{
+    position: absolute;
+    margin: 0 auto;
+    bottom: 0;
+    width: 10%;
+    height: 10%;
+    animation: moveFromDownToTop 5s linear infinite;
+}
