@@ -1,22 +1,22 @@
-#parallax1 {
+#image1 {
     height: 500px;
     background: url("Resources/Q3/img_lights_wide.jpg") no-repeat fixed center;
     background-size: cover;
 }
 
-#parallax2 {
+#image2 {
     height: 500px;
     background: url("Resources/Q3/img_nature_wide.jpg") no-repeat fixed center;
     background-size: cover;
 }
 
-#parallax3 {
+#image3 {
     height: 500px;
     background: url("Resources/Q3/img_mountains_wide.jpg") no-repeat fixed center;
     background-size: cover;
 }
 
-#parallax4 {
+#image4 {
     height: 500px;
     background: url("Resources/Q3/img_snow_wide.jpg") no-repeat fixed center;
     background-size: cover;
