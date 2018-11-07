@@ -207,8 +207,9 @@
 
     .desktop-4 {
         flex: 0 0 50%;
-        max-width: 50%;
+        /*max-width: 50%;*/
     }
+    
 
     .desktop-5 {
         flex: 0 0 62.5%;
