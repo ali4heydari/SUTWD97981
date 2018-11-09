@@ -1,12 +1,88 @@
-body{
-    background: linear-gradient(270deg, #246655, #cf1919);
-    background-size: 200% 200%;
-    animation: gradientMover 5s ease infinite;
+@-webkit-keyframes gradient {
+    0%,
+    100% {
+        background-position: 0 0;
+    }
+    25% {
+        background-position: 100% 0;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    75% {
+        background-position: 0 100%;
+    }
 }
 
-@keyframes gradientMover {
-    0%, 100%{background-position:0 0}
-    25%{background-position:100% 0}
-    50%{background-position:100% 100%}
-    75%{background-position:0 100%}
+@-moz-keyframes gradient {
+    0%,
+    100% {
+        background-position: 0 0;
+    }
+    25% {
+        background-position: 100% 0;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    75% {
+        background-position: 0 100%;
+    }
+}
+
+@-o-keyframes gradient {
+    0%,
+    100% {
+        background-position: 0 0;
+    }
+    25% {
+        background-position: 100% 0;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    75% {
+        background-position: 0 100%;
+    }
+}
+
+@keyframes gradient {
+    0%,
+    100% {
+        background-position: 0 0;
+    }
+    25% {
+        background-position: 100% 0;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    75% {
+        background-position: 0 100%;
+    }
+}
+
+body {
+    background: linear-gradient(
+            -45deg,
+            #7b4397,
+            #dc2430,
+            #000428,
+            #004e92,
+            #c33764,
+            #1d2671,
+            #516395,
+            #56ab2f,
+            #bdc3c7,
+            #ffafbd,
+            #2193b0,
+            #42275a,
+            #de6262,
+            #48b1bf
+    );
+    background-size: 200% 200%;
+    -webkit-animation: gradient 5s ease infinite;
+    -moz-animation: gradient 5s ease infinite;
+    -o-animation: gradient 5s ease infinite;
+    animation: gradient 5s ease infinite;
 }

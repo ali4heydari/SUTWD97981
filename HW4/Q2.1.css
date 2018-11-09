@@ -8,9 +8,7 @@
 }
 
 body {
-    background-image: url('Resources/Q2/LovelyPic.jpg');
-    background-repeat: repeat;
-    background-attachment: fixed;
+    background: url('Resources/Q2/LovelyPic.jpg') repeat fixed;
     background-size: cover;
     animation: sky 60s linear infinite;
 }
