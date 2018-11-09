@@ -1,23 +1,30 @@
-#image1 {
-    height: 500px;
-    background: url("Resources/Q3/img_lights_wide.jpg") no-repeat fixed center;
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
+
+.parallax {
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
+}
+
+#image1 {
+    background-image: url("Resources/Q3/img_lights_wide.jpg");
 }
 
 #image2 {
-    height: 500px;
-    background: url("Resources/Q3/img_nature_wide.jpg") no-repeat fixed center;
-    background-size: cover;
+    background-image: url("Resources/Q3/img_nature_wide.jpg");
 }
 
 #image3 {
-    height: 500px;
-    background: url("Resources/Q3/img_mountains_wide.jpg") no-repeat fixed center;
-    background-size: cover;
+    background-image: url("Resources/Q3/img_mountains_wide.jpg");
 }
 
 #image4 {
-    height: 500px;
-    background: url("Resources/Q3/img_snow_wide.jpg") no-repeat fixed center;
-    background-size: cover;
+    background-image: url("Resources/Q3/img_snow_wide.jpg");
 }
