@@ -1,281 +1,590 @@
-*, *:after, *:before {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+.container-fluid,
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .container {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+    margin-right: 16px;
+    margin-left: 16px;
 }
 
-.container-fluid {
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.row-gutter > [class^="desktop-"], [class^="mobile-"], [class^="tablet-"], [class^="large-"] {
-    margin-right: 8px;
-    margin-left: 8px;
-}
-
-[class^="container"] > .row-middle {
-    /*TODO difference between row-center and row-middle?! */
+.row-gutter,
+.row-bottom,
+.row-middle,
+.row-right,
+.row-center,
+.row {
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin-right: 0;
-    margin-left: 0;
-
-}
-
-[class^="container"] > .row-bottom {
-
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: 0;
-    margin-left: 0;
-    margin-top: auto;
 }
 
 .row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: 0;
-    margin-left: 0;
-    justify-content: left;
+    justify-content: flex-start;
 }
 
 .row-center {
-
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: 0;
-    margin-left: 0;
     justify-content: center;
 }
 
 .row-right {
-
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: 0;
-    margin-left: 0;
     justify-content: flex-end;
-
 }
 
-.row-gutter{
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: 0;
-    margin-left: 0;
+.row-middle {
+    margin: auto 0;
 }
 
-[class~="desktop-"], [class~="mobile-"], [class~="tablet-"], [class~="large-"] {
+.row-bottom {
+    margin-top: auto;
+}
+
+.mobile-auto {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+}
+
+.mobile-1 {
     position: relative;
+    -ms-flex: 0 0 12.5%;
+    flex: 0 0 12.5%;
     width: 100%;
-    padding-right: 16px;
-    padding-left: 16px;
+    max-width: 12.5%;
 }
 
-@media (min-width: 723px) {
-
-    .mobile-auto {
-        flex: 0 0 auto;
-        width: auto;
-        max-width: 100%;
-    }
-
-    .mobile-1 {
-        flex: 0 0 12.5%;
-        max-width: 12.5%;
-    }
-
-    .mobile-2 {
-        flex: 0 0 25%;
-        max-width: 25%;
-    }
-
-    .mobile-3 {
-        flex: 0 0 37.5%;
-        max-width: 37.5%;
-    }
-
-    .mobile-4 {
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
-
-    .mobile-5 {
-        flex: 0 0 62.5%;
-        max-width: 62.5%;
-    }
-
-    .mobile-6 {
-        flex: 0 0 75%;
-        max-width: 75%;
-    }
-
-    .mobile-7 {
-        flex: 0 0 87.5%;
-        max-width: 87.5%;
-    }
-
-    .mobile-8 {
-
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
+.row-gutter > .mobile-1 {
+    margin-right: 8px;
+    margin-left: 8px;
+    -ms-flex: 0 0 calc(1 * 12.5% - 16px);
+    flex: 0 0 calc(1 * 12.5% - 16px);
+    max-width: calc(1 * 12.5% - 16px);
 }
 
-@media (min-width: 933px) {
+.mobile-2 {
+    position: relative;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    width: 100%;
+    max-width: 25%;
+}
 
+.row-gutter > .mobile-2 {
+    margin-right: 8px;
+    margin-left: 8px;
+    -ms-flex: 0 0 calc(2 * 12.5% - 16px);
+    flex: 0 0 calc(2 * 12.5% - 16px);
+    max-width: calc(2 * 12.5% - 16px);
+}
+
+.mobile-3 {
+    position: relative;
+    -ms-flex: 0 0 37.5%;
+    flex: 0 0 37.5%;
+    width: 100%;
+    max-width: 37.5%;
+}
+
+.row-gutter > .mobile-3 {
+    margin-right: 8px;
+    margin-left: 8px;
+    -ms-flex: 0 0 calc(3 * 12.5% - 16px);
+    flex: 0 0 calc(3 * 12.5% - 16px);
+    max-width: calc(3 * 12.5% - 16px);
+}
+
+.mobile-4 {
+    position: relative;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    width: 100%;
+    max-width: 50%;
+}
+
+.row-gutter > .mobile-4 {
+    margin-right: 8px;
+    margin-left: 8px;
+    -ms-flex: 0 0 calc(4 * 12.5% - 16px);
+    flex: 0 0 calc(4 * 12.5% - 16px);
+    max-width: calc(4 * 12.5% - 16px);
+}
+
+.mobile-5 {
+    position: relative;
+    -ms-flex: 0 0 62.5%;
+    flex: 0 0 62.5%;
+    width: 100%;
+    max-width: 62.5%;
+}
+
+.row-gutter > .mobile-5 {
+    margin-right: 8px;
+    margin-left: 8px;
+    -ms-flex: 0 0 calc(5 * 12.5% - 16px);
+    flex: 0 0 calc(5 * 12.5% - 16px);
+    max-width: calc(5 * 12.5% - 16px);
+}
+
+.mobile-6 {
+    position: relative;
+    -ms-flex: 0 0 75%;
+    flex: 0 0 75%;
+    width: 100%;
+    max-width: 75%;
+}
+
+.row-gutter > .mobile-6 {
+    margin-right: 8px;
+    margin-left: 8px;
+    -ms-flex: 0 0 calc(6 * 12.5% - 16px);
+    flex: 0 0 calc(6 * 12.5% - 16px);
+    max-width: calc(6 * 12.5% - 16px);
+}
+
+.mobile-7 {
+    position: relative;
+    -ms-flex: 0 0 87.5%;
+    flex: 0 0 87.5%;
+    width: 100%;
+    max-width: 87.5%;
+}
+
+.row-gutter > .mobile-7 {
+    margin-right: 8px;
+    margin-left: 8px;
+    -ms-flex: 0 0 calc(7 * 12.5% - 16px);
+    flex: 0 0 calc(7 * 12.5% - 16px);
+    max-width: calc(7 * 12.5% - 16px);
+}
+
+.mobile-8 {
+    position: relative;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+}
+
+.row-gutter > .mobile-8 {
+    margin-right: 8px;
+    margin-left: 8px;
+    -ms-flex: 0 0 calc(8 * 12.5% - 16px);
+    flex: 0 0 calc(8 * 12.5% - 16px);
+    max-width: calc(8 * 12.5% - 16px);
+}
+
+@media only screen and (min-width: 723px) {
     .tablet-auto {
+        -ms-flex: 0 0 auto;
         flex: 0 0 auto;
         width: auto;
         max-width: 100%;
     }
 
     .tablet-1 {
+        position: relative;
+        -ms-flex: 0 0 12.5%;
         flex: 0 0 12.5%;
+        width: 100%;
         max-width: 12.5%;
     }
 
+    .row-gutter > .tablet-1 {
+        margin-right: 8px;
+        margin-left: 8px;
+        -ms-flex: 0 0 calc(1 * 12.5% - 16px);
+        flex: 0 0 calc(1 * 12.5% - 16px);
+        max-width: calc(1 * 12.5% - 16px);
+    }
+
     .tablet-2 {
+        position: relative;
+        -ms-flex: 0 0 25%;
         flex: 0 0 25%;
+        width: 100%;
         max-width: 25%;
     }
 
+    .row-gutter > .tablet-2 {
+        margin-right: 8px;
+        margin-left: 8px;
+        -ms-flex: 0 0 calc(2 * 12.5% - 16px);
+        flex: 0 0 calc(2 * 12.5% - 16px);
+        max-width: calc(2 * 12.5% - 16px);
+    }
+
     .tablet-3 {
+        position: relative;
+        -ms-flex: 0 0 37.5%;
         flex: 0 0 37.5%;
+        width: 100%;
         max-width: 37.5%;
     }
 
+    .row-gutter > .tablet-3 {
+        margin-right: 8px;
+        margin-left: 8px;
+        -ms-flex: 0 0 calc(3 * 12.5% - 16px);
+        flex: 0 0 calc(3 * 12.5% - 16px);
+        max-width: calc(3 * 12.5% - 16px);
+    }
+
     .tablet-4 {
+        position: relative;
+        -ms-flex: 0 0 50%;
         flex: 0 0 50%;
+        width: 100%;
         max-width: 50%;
     }
 
+    .row-gutter > .tablet-4 {
+        margin-right: 8px;
+        margin-left: 8px;
+        -ms-flex: 0 0 calc(4 * 12.5% - 16px);
+        flex: 0 0 calc(4 * 12.5% - 16px);
+        max-width: calc(4 * 12.5% - 16px);
+    }
+
     .tablet-5 {
+        position: relative;
+        -ms-flex: 0 0 62.5%;
         flex: 0 0 62.5%;
+        width: 100%;
         max-width: 62.5%;
     }
 
+    .row-gutter > .tablet-5 {
+        margin-right: 8px;
+        margin-left: 8px;
+        -ms-flex: 0 0 calc(5 * 12.5% - 16px);
+        flex: 0 0 calc(5 * 12.5% - 16px);
+        max-width: calc(5 * 12.5% - 16px);
+    }
+
     .tablet-6 {
+        position: relative;
+        -ms-flex: 0 0 75%;
         flex: 0 0 75%;
+        width: 100%;
         max-width: 75%;
     }
 
+    .row-gutter > .tablet-6 {
+        margin-right: 8px;
+        margin-left: 8px;
+        -ms-flex: 0 0 calc(6 * 12.5% - 16px);
+        flex: 0 0 calc(6 * 12.5% - 16px);
+        max-width: calc(6 * 12.5% - 16px);
+    }
+
     .tablet-7 {
+        position: relative;
+        -ms-flex: 0 0 87.5%;
         flex: 0 0 87.5%;
+        width: 100%;
         max-width: 87.5%;
     }
 
-    .tablet-8 {
+    .row-gutter > .tablet-7 {
+        margin-right: 8px;
+        margin-left: 8px;
+        -ms-flex: 0 0 calc(7 * 12.5% - 16px);
+        flex: 0 0 calc(7 * 12.5% - 16px);
+        max-width: calc(7 * 12.5% - 16px);
+    }
 
+    .tablet-8 {
+        position: relative;
+        -ms-flex: 0 0 100%;
         flex: 0 0 100%;
+        width: 100%;
         max-width: 100%;
     }
+
+    .row-gutter > .tablet-8 {
+        margin-right: 8px;
+        margin-left: 8px;
+        -ms-flex: 0 0 calc(8 * 12.5% - 16px);
+        flex: 0 0 calc(8 * 12.5% - 16px);
+        max-width: calc(8 * 12.5% - 16px);
+    }
 }
-
-@media (min-width: 1127px) {
-
+@media only screen and (min-width: 933px) {
     .desktop-auto {
+        -ms-flex: 0 0 auto;
         flex: 0 0 auto;
         width: auto;
         max-width: 100%;
     }
 
     .desktop-1 {
+        position: relative;
+        -ms-flex: 0 0 12.5%;
         flex: 0 0 12.5%;
+        width: 100%;
         max-width: 12.5%;
     }
 
+    .row-gutter > .desktop-1 {
+        margin-right: 8px;
+        margin-left: 8px;
+        -ms-flex: 0 0 calc(1 * 12.5% - 16px);
+        flex: 0 0 calc(1 * 12.5% - 16px);
+        max-width: calc(1 * 12.5% - 16px);
+    }
+
     .desktop-2 {
+        position: relative;
+        -ms-flex: 0 0 25%;
         flex: 0 0 25%;
+        width: 100%;
         max-width: 25%;
     }
 
+    .row-gutter > .desktop-2 {
+        margin-right: 8px;
+        margin-left: 8px;
+        -ms-flex: 0 0 calc(2 * 12.5% - 16px);
+        flex: 0 0 calc(2 * 12.5% - 16px);
+        max-width: calc(2 * 12.5% - 16px);
+    }
+
     .desktop-3 {
+        position: relative;
+        -ms-flex: 0 0 37.5%;
         flex: 0 0 37.5%;
+        width: 100%;
         max-width: 37.5%;
     }
 
-    .desktop-4 {
-        flex: 0 0 50%;
-        /*max-width: 50%;*/
+    .row-gutter > .desktop-3 {
+        margin-right: 8px;
+        margin-left: 8px;
+        -ms-flex: 0 0 calc(3 * 12.5% - 16px);
+        flex: 0 0 calc(3 * 12.5% - 16px);
+        max-width: calc(3 * 12.5% - 16px);
     }
-    
+
+    .desktop-4 {
+        position: relative;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        width: 100%;
+        max-width: 50%;
+    }
+
+    .row-gutter > .desktop-4 {
+        margin-right: 8px;
+        margin-left: 8px;
+        -ms-flex: 0 0 calc(4 * 12.5% - 16px);
+        flex: 0 0 calc(4 * 12.5% - 16px);
+        max-width: calc(4 * 12.5% - 16px);
+    }
 
     .desktop-5 {
+        position: relative;
+        -ms-flex: 0 0 62.5%;
         flex: 0 0 62.5%;
+        width: 100%;
         max-width: 62.5%;
     }
 
+    .row-gutter > .desktop-5 {
+        margin-right: 8px;
+        margin-left: 8px;
+        -ms-flex: 0 0 calc(5 * 12.5% - 16px);
+        flex: 0 0 calc(5 * 12.5% - 16px);
+        max-width: calc(5 * 12.5% - 16px);
+    }
+
     .desktop-6 {
+        position: relative;
+        -ms-flex: 0 0 75%;
         flex: 0 0 75%;
+        width: 100%;
         max-width: 75%;
     }
 
+    .row-gutter > .desktop-6 {
+        margin-right: 8px;
+        margin-left: 8px;
+        -ms-flex: 0 0 calc(6 * 12.5% - 16px);
+        flex: 0 0 calc(6 * 12.5% - 16px);
+        max-width: calc(6 * 12.5% - 16px);
+    }
+
     .desktop-7 {
+        position: relative;
+        -ms-flex: 0 0 87.5%;
         flex: 0 0 87.5%;
+        width: 100%;
         max-width: 87.5%;
     }
 
-    .desktop-8 {
+    .row-gutter > .desktop-7 {
+        margin-right: 8px;
+        margin-left: 8px;
+        -ms-flex: 0 0 calc(7 * 12.5% - 16px);
+        flex: 0 0 calc(7 * 12.5% - 16px);
+        max-width: calc(7 * 12.5% - 16px);
+    }
 
+    .desktop-8 {
+        position: relative;
+        -ms-flex: 0 0 100%;
         flex: 0 0 100%;
+        width: 100%;
         max-width: 100%;
+    }
+
+    .row-gutter > .desktop-8 {
+        margin-right: 8px;
+        margin-left: 8px;
+        -ms-flex: 0 0 calc(8 * 12.5% - 16px);
+        flex: 0 0 calc(8 * 12.5% - 16px);
+        max-width: calc(8 * 12.5% - 16px);
+    }
+}
+@media only screen and (min-width: 1127px) {
+    .large-auto {
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 100%;
+    }
+
+    .large-1 {
+        position: relative;
+        -ms-flex: 0 0 12.5%;
+        flex: 0 0 12.5%;
+        width: 100%;
+        max-width: 12.5%;
+    }
+
+    .row-gutter > .large-1 {
+        margin-right: 8px;
+        margin-left: 8px;
+        -ms-flex: 0 0 calc(1 * 12.5% - 16px);
+        flex: 0 0 calc(1 * 12.5% - 16px);
+        max-width: calc(1 * 12.5% - 16px);
+    }
+
+    .large-2 {
+        position: relative;
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        width: 100%;
+        max-width: 25%;
+    }
+
+    .row-gutter > .large-2 {
+        margin-right: 8px;
+        margin-left: 8px;
+        -ms-flex: 0 0 calc(2 * 12.5% - 16px);
+        flex: 0 0 calc(2 * 12.5% - 16px);
+        max-width: calc(2 * 12.5% - 16px);
+    }
+
+    .large-3 {
+        position: relative;
+        -ms-flex: 0 0 37.5%;
+        flex: 0 0 37.5%;
+        width: 100%;
+        max-width: 37.5%;
+    }
+
+    .row-gutter > .large-3 {
+        margin-right: 8px;
+        margin-left: 8px;
+        -ms-flex: 0 0 calc(3 * 12.5% - 16px);
+        flex: 0 0 calc(3 * 12.5% - 16px);
+        max-width: calc(3 * 12.5% - 16px);
+    }
+
+    .large-4 {
+        position: relative;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        width: 100%;
+        max-width: 50%;
+    }
+
+    .row-gutter > .large-4 {
+        margin-right: 8px;
+        margin-left: 8px;
+        -ms-flex: 0 0 calc(4 * 12.5% - 16px);
+        flex: 0 0 calc(4 * 12.5% - 16px);
+        max-width: calc(4 * 12.5% - 16px);
+    }
+
+    .large-5 {
+        position: relative;
+        -ms-flex: 0 0 62.5%;
+        flex: 0 0 62.5%;
+        width: 100%;
+        max-width: 62.5%;
+    }
+
+    .row-gutter > .large-5 {
+        margin-right: 8px;
+        margin-left: 8px;
+        -ms-flex: 0 0 calc(5 * 12.5% - 16px);
+        flex: 0 0 calc(5 * 12.5% - 16px);
+        max-width: calc(5 * 12.5% - 16px);
+    }
+
+    .large-6 {
+        position: relative;
+        -ms-flex: 0 0 75%;
+        flex: 0 0 75%;
+        width: 100%;
+        max-width: 75%;
+    }
+
+    .row-gutter > .large-6 {
+        margin-right: 8px;
+        margin-left: 8px;
+        -ms-flex: 0 0 calc(6 * 12.5% - 16px);
+        flex: 0 0 calc(6 * 12.5% - 16px);
+        max-width: calc(6 * 12.5% - 16px);
+    }
+
+    .large-7 {
+        position: relative;
+        -ms-flex: 0 0 87.5%;
+        flex: 0 0 87.5%;
+        width: 100%;
+        max-width: 87.5%;
+    }
+
+    .row-gutter > .large-7 {
+        margin-right: 8px;
+        margin-left: 8px;
+        -ms-flex: 0 0 calc(7 * 12.5% - 16px);
+        flex: 0 0 calc(7 * 12.5% - 16px);
+        max-width: calc(7 * 12.5% - 16px);
+    }
+
+    .large-8 {
+        position: relative;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .row-gutter > .large-8 {
+        margin-right: 8px;
+        margin-left: 8px;
+        -ms-flex: 0 0 calc(8 * 12.5% - 16px);
+        flex: 0 0 calc(8 * 12.5% - 16px);
+        max-width: calc(8 * 12.5% - 16px);
     }
 }
 
-.large-auto {
-    flex: 0 0 auto;
-    width: auto;
-    max-width: 100%;
-}
-
-.large-1 {
-    flex: 0 0 12.5%;
-    max-width: 12.5%;
-}
-
-.large-2 {
-    flex: 0 0 25%;
-    max-width: 25%;
-}
-
-.large-3 {
-    flex: 0 0 37.5%;
-    max-width: 37.5%;
-}
-
-.large-4 {
-    flex: 0 0 50%;
-    max-width: 50%;
-}
-
-.large-5 {
-    flex: 0 0 62.5%;
-    max-width: 62.5%;
-}
-
-.large-6 {
-    flex: 0 0 75%;
-    max-width: 75%;
-}
-
-.large-7 {
-    flex: 0 0 87.5%;
-    max-width: 87.5%;
-}
-
-.large-8 {
-
-    flex: 0 0 100%;
-    max-width: 100%;
-}
+/*# sourceMappingURL=index.css.map */
